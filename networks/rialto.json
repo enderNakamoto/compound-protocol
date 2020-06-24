@@ -1,0 +1,10 @@
+{
+  "Contracts": {
+    "MoneyMarket": "0x0xfFDDe983f24Edc1a2db88A0e71f54d772f0BfB67",
+    "Migrations": "0x{address}",
+    "PriceOracle": "0x6a87017395259627B74B7Bf4d76F13001A39AB22",
+    "InterestRateModel": "0x{address}",
+    "MyContract": "0x18436774c7A07dfa82d015a0aB4FfE09777f62d9"
+  },
+  "Tokens": {}
+}

@@ -208,6 +208,32 @@ module.exports = {
         {file: "~/.ethereum/mainnet"}                        // Load from given file with contents as the private key (e.g. 0x...)
       ]
     },
+    rialto: {
+      providers: [
+        {env: "PROVIDER"},
+        {file: "~/.ethereum/rialto-url"},                    // Load from given file with contents as the URL (e.g. https://infura.io/api-key)
+        {http: "https://data-seed-prebsc-1-s1.binance.org:8545"}
+      ],
+      web3: {
+        gas: [
+          {env: "GAS"},
+          {default: "4600000"}
+        ],
+        gas_price: [
+          {env: "GAS_PRICE"},
+          {default: "20000000000"}
+        ],
+        options: {
+          transactionConfirmationBlocks: 1,
+          transactionBlockTimeout: 5
+        }
+      },
+      accounts: [
+        {env: "ACCOUNT"},
+        {file: "~/.ethereum/rialto"}, // Load from given file with contents as the private key (without 0x prefix)
+        {unlocked: 0}
+      ]
+    },
   },
   get_network_file: (network) => {
     return null;
